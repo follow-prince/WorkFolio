@@ -334,6 +334,7 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+
 }
 
 .info-content .name {
@@ -353,6 +354,7 @@ main {
   padding: 3px 12px;
   border-radius: 8px;
 }
+
 
 .info_more-btn {
   position: absolute;
@@ -1139,6 +1141,7 @@ main {
   height: 100%;
   border: none;
   filter: grayscale(1) invert(1);
+  -webkit-filter: grayscale(1) invert(1);
 }
 
 .contact-form { margin-bottom: 10px; }
@@ -1843,6 +1846,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .info-content .title { margin: auto; }
+  
 
   .info_more-btn { display: none; }
 
