@@ -293,7 +293,12 @@ article.active {
 }
 
 
-
+.content-card time {
+  font-size: var(--fs-6);
+  color: var(--light-gray-70);
+  font-weight: var(--fw-300);
+  margin-bottom: 10px;
+}
 
 
 /*-----------------------------------*\
