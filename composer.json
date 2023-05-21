@@ -1,6 +1,0 @@
-{
-    "name": "vendor/autoload.php",
-    "require": {
-        "phpmailer/phpmailer": "^6.8"
-    }
-}
