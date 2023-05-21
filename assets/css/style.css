@@ -338,15 +338,24 @@ main {
 
 
 .sidebar-info img {
-  padding: 20px;
+  padding: 0px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
-
+  border: 3px solid #fff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
+
 
 .info-content .name {
   font-family: "Times New Roman", Times, serif;
@@ -1908,7 +1917,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .glow-on-hover {
   width: 80px;
-  height: 35px;
+  height: 25px;
   border: none;
   outline: none;
   color: #fff;
