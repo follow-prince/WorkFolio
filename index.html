@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="UTF-8">
@@ -17,19 +17,13 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-
-
-
-
-  
-
   <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="follow.prince" data-description="Support me on Buy me a coffee!" data-message="Buy me a coffee and help support my work - every sip counts!" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
 
 </head>
 
@@ -49,14 +43,16 @@
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box">
+        <figure class="avatar-box ">
           <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick"> <b>E L A V A R A S A N</b> </h1>
 
-          <p class="title">🟢 <b>Student</b> </p>
+          <h1 class="name " title="Richard hanrick"> <b>E L A V A R A S A N</b> </h1>
+
+          <p class="title glow-on-hover">🟢 <b>Student</b> </p>
+          
          
         </div>
         
@@ -136,12 +132,58 @@
 
         <ul class="social-list">
           <a target="_blank">
-            <button class="glow-on-hover" type="button" onclick="setTimeout(function(){ window.location.href = 'https://drive.google.com/file/d/1UgSKwvZhqB48rnGxtgl5PQvsU1P9jAGz/view?usp=share_link'; }, 2000);">
-                RESUME
+            <button  id="btnShow" class="glow-on-hover " type="button" ">
+            
+<b>RESUME</b>
+
+           <!-- Add meta tag for viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Update jQuery and jQuery UI URLs to use HTTPS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js"></script>
+<link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet">
+
+<script type="text/javascript">
+    $(function () {
+        var fileName = "ELAVARASAN_CV.pdf";
+        $("#btnShow").click(function () {
+            $("#dialog").dialog({
+                modal: true,
+                title: fileName,
+                width: 'auto', // Set width to 'auto' to make it responsive
+                height: 'auto', // Set height to 'auto' to make it responsive
+               
+                open: function () {
+                    var object = "<object data=\"{FileName}\" type=\"application/pdf\" width=\"100%\" height=\"100%\">";
+                    object += "If you are unable to view the file, you can download it from <a href=\"{FileName}\" style=\"color : red \"> <b>Download CV</b></a>";
+                    object += " or view to <a target=\"_blank\" href=\"https://drive.google.com/file/d/1Yra9yOusuLVkt_QPaTW1HoDQCy49P1zy/view?usp=sharing\" style=\"color : red \"> <b>Online PDF Reader</b></a> ";
+                    object += "</object>";
+                    object = object.replace(/{FileName}/g, "Files/" + fileName);
+                    $("#dialog").html(object);
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+    /* Add CSS for mobile view */
+    @media (max-width: 480px) {
+        #dialog {
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+    }
+</style>
+
+<div id="dialog" style="display: none"></div>
+
             </button>
         </a>
 
-          <li class="social-item">
+          <li class="social-item ">
             <a href="https://github.com/follow-prince" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
@@ -235,17 +277,11 @@
         </header>
 
         <section class="about-text">
-          <p>
-            My name is  <b>ELAVARASAN</b> and I'm a Web Developer and open-source enthusiast  from Chennai, India.
-          </p>
+          <p> <div style="font-size:medium; color:rgba(85, 242, 90, 0.878)  "> <b>Welcome to my portfolio website!</b> </div>I'm <b>ELAVARASAN</b>, a passionate web developer and open-source enthusiast hailing from Chennai, India. Although my educational background is in B.Com, my true passion lies in web development. Currently, I am pursuing my MCA and actively working towards honing my skills in this exciting field. <p id="text"></p>
 
-          <p>
-            I am a web development beginner studying MCA. Even though I have a B.Com degree, web development is my true passion, and I'm determined to make it my career. I love learning and coming up with new ideas, and I've gained valuable open-source skills from spending a lot of time on the internet.
-
-          
+        </p>
         
 
-          </p>
         </section>
 
 
@@ -261,22 +297,26 @@
           <ul class="service-list">
 
 
-
-
+            
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/hacker-svg.svg" alt="camera icon" width="100">
+                <img src="./assets/images/data-report.svg" alt="design icon" width="100">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Junior CyberSecurity Analyst</h4>
+                <h4 class="h4 service-item-title">Data Analyst</h4>
 
                 <p class="service-item-text">
-                  I perform beginner-level cyber security analyses of various categories on an average basis.</p>
+                  As a beginner Data Analyst, you can use Numpy for data manipulation and analysis
+                  
+                </p>
+                
               </div>
 
             </li>
+
+            
 
 
             <li class="service-item">
@@ -314,19 +354,18 @@
             </li>
 
 
-            
+
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/data-report.svg" alt="design icon" width="100">
+                <img src="./assets/images/hacker-svg.svg" alt="camera icon" width="100">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analyst</h4>
+                <h4 class="h4 service-item-title">Junior CyberSecurity Analyst</h4>
 
                 <p class="service-item-text">
-                  As a beginner Data Analyst, you can use Numpy for data manipulation and analysis
-                </p>
+                  I perform beginner-level cyber security analyses of various categories on an average basis.</p>
               </div>
 
             </li>
@@ -474,15 +513,25 @@
 
           <ul class="clients-list has-scrollbar">
 
+            <li class="clients-item">
+              
+              <img style="border-radius: 16px " src="./assets/images/jcybersecurity.svg" alt="client logo">
+          </li>    
 
             <li class="clients-item">
               
-                <img src="./assets/images/cyberSecurity.svg" alt="client logo">
-            </li>     
+              <img style="border-radius: 16px " src="./assets/images/cyber-threat-management.svg" alt="client logo">
+          </li>    
+
 
             <li class="clients-item">
+              
+                <img style="border-radius: 16px " src="./assets/images/cyberSecurity.svg" alt="client logo">
+            </li>     
+
+            <li  class="clients-item">
              
-                <img src="./assets/images/EndpointSecurity.svg" alt="client logo">
+                <img style="border-radius: 16px " src="./assets/images/EndpointSecurity.svg" alt="client logo">
             </li>
 
          
@@ -528,6 +577,16 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
+
+
+
+
+
+
+
+
+
+        
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -579,6 +638,16 @@
               
             </li>
 
+            <!-- 10th details -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">SSLC - Secondary School Leaving Certificate - 2016 </h4>
+
+              <span>Govt Hr Sec school · Percentage: 62%</span>
+
+              
+            </li>
+
           </ol>
 
         </section>
@@ -613,9 +682,13 @@
 
               <p class="timeline-text">
                 
-During my 2-month internship training, I gained extensive experience in machine learning, data analytics, Pythonization on development, and data visualization. I successfully developed and trained machine learning models, deploying them to production environments. Throughout the internship, I proficiently utilized a wide range of tools including Python, NumPy, Pandas, Scikit-Learn, TensorFlow, SQL, and Tableau. Jupyter Notebooks served as a valuable platform for developing, documenting, and presenting my work.
-<br><br>
-Moreover, I demonstrated my skills in automating tasks and enhancing development workflows using Python, Git, and GitHub. These abilities allowed me to improve efficiency and streamline processes. Additionally, I showcased my expertise in creating visually appealing charts, graphs, and other visualizations to effectively communicate data insights. Python, Matplotlib, and Seaborn were my go-to tools for this purpose.
+                • During my 2-month internship, I gained extensive experience in machine learning, data analytics, Python development, and data visualization. I successfully developed and trained machine learning models, deploying them to production environments. <br> <br>• Throughout the internship, I used various tools such as Python, NumPy, Pandas, Scikit-Learn, TensorFlow, SQL, and Tableau. Jupyter Notebooks played a crucial role in developing, documenting, and presenting my work. 
+<br><br>• I also showcased my skills in automating tasks and improving development workflows using Python, Git, and GitHub. These abilities helped me enhance efficiency and streamline processes. Additionally, I demonstrated expertise in creating visually appealing charts, graphs, and other visualizations to effectively communicate data insights. For this purpose, I relied on Python, Matplotlib, and Seaborn as my primary tools.
+
+
+
+
+
                 <br><b>Skills: Django · Python (Programming Language) · Anaconda · Machine Learning · Jupiter · Linux</b>
               </p>
 
@@ -628,9 +701,11 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
               <span>Fiverr · Freelance · Remote</span>
 
               <p class="timeline-text">
-                As a portfolio website freelancer, I designed and developed websites for clients, offering three distinct packages - Simple, Advanced, and Premium. Using HTML & CSS, JavaScript, PHP, Python, and TypeScript, I created stunning websites with various features such as payment integration, forum setup, social media integration, analytics setup, video embedding, events listing, music integration, chat integration, FAQ section, and gallery display. <br><br>
+                • As a portfolio website freelancer, I designed and developed websites for clients, offering three distinct packages - Simple, Advanced, and Premium. 
+                
+                <br><br>• Using HTML & CSS, JavaScript, PHP, Python, and TypeScript, I created stunning websites with various features such as payment integration, forum setup, social media integration, analytics setup, video embedding, events listing, music integration, chat integration, FAQ section, and gallery display. <br><br>
 
-                The Premium package, in particular, offered unlimited revisions, full e-commerce functionality, and premium hosting setup, ensuring a seamless user experience for customers. Additionally, I provided an About section to introduce myself and showcase my skills and experience in the field.
+                •The Premium package, in particular, offered unlimited revisions, full e-commerce functionality, and premium hosting setup, ensuring a seamless user experience for customers. Additionally,<br><br>• I provided an About section to introduce myself and showcase my skills and experience in the field.
                 <br>
                 <b>Skills: portfolio · Linux · Front-End Development · Web Design · Web Applications · Website Monetization</b>
               </p>
@@ -652,7 +727,7 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
 
 
 
-          
+        
 
 
 
@@ -790,7 +865,13 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
 
           </ul>
 
+
+
+
+
+
         </section>
+
 
       </article>
 
@@ -807,6 +888,18 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
+
+
+
+
+
+
+
+
+
+
+
+
 
         <section class="projects">
 
@@ -869,6 +962,10 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
 
           <ul class="project-list">
 
+<!-- ---------------------------------------------------- -->
+
+
+
             <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
 
@@ -890,6 +987,9 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
 
 
 
+
+
+<!-- ----------------------------------------------------------- -->
           </ul>
 
         </section>
@@ -913,7 +1013,7 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
-
+<!-- ___________________________________________________________- -->
 
 
 
@@ -1116,6 +1216,20 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
@@ -1172,3 +1286,4 @@ Moreover, I demonstrated my skills in automating tasks and enhancing development
 </body>
 
 </html>
+ 

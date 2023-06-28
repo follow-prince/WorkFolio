@@ -35,7 +35,7 @@
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    hsl(111, 81%, 53%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
@@ -50,8 +50,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(99, 100%, 50%), 
+    hsl(86, 100%, 50%)
   );
 
   /* solid */
@@ -63,11 +63,11 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: hsl(95, 100%, 50%);
+  --vegas-gold: hsl(95, 100%, 50%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(115, 100%, 50%);
 
   /**
    * typography
@@ -253,6 +253,8 @@ article.active {
   height: 3px;
   background: var(--text-gradient-yellow);
   border-radius: 3px;
+    font-family: "Times New Roman", Times, serif;
+
 }
 
 .has-scrollbar::-webkit-scrollbar {
@@ -372,8 +374,10 @@ main {
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
-  padding: 3px 12px;
+  padding: 7px 12px;
   border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+
 }
 
 
@@ -764,6 +768,8 @@ main {
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
+  
+
 }
 
 .clients-item {
@@ -1985,6 +1991,26 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+/* ---------------------------------------------------------- */
+
+#typed  {
+
+  color: rgba(53, 236, 144, 0.484);
+  font-size:x-small;
+  font-family: "Times New Roman", Times, serif;
+  padding: 8% 0px;
+  
+}
+
+/* _______________________________________________________________ */
+
+
+#text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
 
 
 
@@ -1995,6 +2021,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
+
+
+/* --------------------------------------------- */
 
 
 

@@ -159,5 +159,46 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
+// _____________________________________________________________________
+var textElement = document.getElementById("text");
+var text = `\nI am deeply dedicated to transforming my love for web development into a fulfilling career. With an insatiable thirst for knowledge and a penchant for generating innovative ideas, I find great joy in continuously expanding my expertise. Spending ample time exploring the depths of the internet has endowed me with valuable open-source skills.\n
+Through this website, I aim to showcase my projects, skills, and experiences in web development. I believe in creating efficient and visually appealing websites that not only captivate users but also provide them with a seamless and enjoyable experience. From front-end design to back-end development, I strive to deliver high-quality solutions that meet the unique needs of each project.\n
+Whether you're a potential client, fellow developer, or someone simply interested in the world of web development, I invite you to explore my portfolio. Here, you'll find a collection of my work, demonstrating my proficiency in various programming languages, frameworks, and technologies. I'm always open to collaboration and new opportunities, so feel free to reach out if you'd like to discuss a project or connect with me.\n
+Thank you for visiting, and I hope you enjoy exploring my portfolio as much as I enjoyed creating it. Let's build remarkable digital experiences together!`;
+
+// Exporting to HTML
+var htmlText = text.replace(/\n/g, "<br>");
+
+
+
+function showMore() {
+  var readMoreButton = document.createElement("button");
+  readMoreButton.textContent = "Read More..";
+  readMoreButton.style.color = "white";
+  readMoreButton.addEventListener("click", expandText);
+  textElement.appendChild(readMoreButton);
+}
+
+function expandText() {
+  textElement.innerHTML = htmlText;
+  voiceElement.textContent = text; // Set the entire text for voice playback
+
+}
+
+showMore();
+ // Start typing immediately
+
+
+
+
+
+
+
+
+
+
+
+
+//  ________________________________________________
 
 
