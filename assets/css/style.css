@@ -845,6 +845,21 @@ main {
   filter: grayscale(0);
 }
 
+.clients-item1 {
+  min-width: 50%;
+  scroll-snap-align: start;
+}
+
+.clients-item1 img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: var(--transition-1);
+}
+
+.clients-item1 img:hover {
+  filter: grayscale(0);
+}
+
 
 /*-----------------------------------*\
   #RESUME
@@ -1385,6 +1400,9 @@ textarea.form-input::-webkit-resizer {
   .clients-item {
     min-width: calc(33.33% - 10px);
   }
+  .clients-item1 {
+    min-width: calc(33.33% - 10px);
+  }
 
 
   /**
@@ -1658,6 +1676,9 @@ textarea.form-input::-webkit-resizer {
   }
 
   .clients-item {
+    min-width: calc(33.33% - 35px);
+  }
+  .clients-item1 {
     min-width: calc(33.33% - 35px);
   }
 
@@ -1948,7 +1969,9 @@ textarea.form-input::-webkit-resizer {
   .clients-item {
     min-width: calc(25% - 38px);
   }
-
+  .clients-item1 {
+    min-width: calc(25% - 38px);
+  }
 
   /**
    * PORTFOLIO
@@ -2216,3 +2239,53 @@ textarea.form-input::-webkit-resizer {
 
 
 /* --------------------------------------------- */
+
+
+
+
+
+
+
+
+/* Instagram Story  */
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes loading {
+
+  100% {
+
+    stroke:#cd476b;
+
+    stroke-dasharray:10;
+
+    transform:rotate(200deg);
+
+  }
+
+}
+
+
+
+/* pop up */
+#videoPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 360px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
