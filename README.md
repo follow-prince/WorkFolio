@@ -17,10 +17,7 @@
 
 ## 🎬 Captured Moment
 <div style="border: 4px solid white; display: inline-block; border-radius: 10px;">
-  <video controls>
-    <source autoplay loop src="./assets/gif/review.mp4" type="video/mp4" >
-    Alt Text
-  </video>
+  <img src="./assets/images/review.png" >
 </div>
 
 
