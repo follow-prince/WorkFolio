@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "ELAVARASAN"
-    ]
+    ],
+    "cmake.configureOnOpen": true
 }
