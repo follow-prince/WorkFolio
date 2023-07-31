@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
+        "boxclose",
         "ELAVARASAN"
     ],
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "livePreview.defaultPreviewPath": "/index.html"
 }

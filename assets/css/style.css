@@ -367,9 +367,9 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
-  border: 3px solid #fff;
-  -webkit-border-radius: 20px;
+  border-radius: 25px;
+  border: 4px solid #ffffff;
+  -webkit-border-radius: 19px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
@@ -850,9 +850,12 @@ main {
   scroll-snap-align: start;
 }
 
+
+
+
 .clients-item1 img {
   width: 100%;
-  filter: grayscale(1);
+  filter: none;
   transition: var(--transition-1);
 }
 
@@ -2273,67 +2276,123 @@ textarea.form-input::-webkit-resizer {
   }
 
 }
+/* ----------------------------------------------------------------------- */
 
 
+[role="tablist"] {
+  display: flex;
+}
 
-/* pop up */
+.tab {
+  padding: 2px 15px;
+  background-color: #9797976f;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+  background-color: #ffffffb0;
+}
+
+.panel {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.panel.active {
+  display: block;
+}
+
+/* Common styles for both mobile and desktop */
 #videoPopup {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 640px;
-  height: 360px;
   background-color: #f1f1f1;
   border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 10px;
 }
 
-
-
 #light {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 600px;
-  max-height: 360px;
-  margin-left: -300px;
-  margin-top: -180px;
-  border: 2px solid #FFF;
-  background: #FFF;
+  transform: translate(-50%, -50%);
+  max-width: 75%; /* Adjust this value to your preference */
+  max-height: 100%; /* Adjust this value to your preference */
+  border: 5px solid #ffffffd2;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ffffffb9, #dfdfdfaa, #ffffff, #e3e3e39a);
   z-index: 1002;
   overflow: visible;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #boxclose {
-  float: right;
   cursor: pointer;
   color: #fff;
-  border: 1px solid #AEAEAE;
-  border-radius: 3px;
-  background: #222222;
-  font-size: 31px;
+  border: 3px solid #eaeaea;
+  border-radius: 10px;
+  background: #f63e3eb0;
+  font-size: 19px;
   font-weight: bold;
   display: inline-block;
-  line-height: 0px;
-  padding: 11px 3px;
+  line-height: 0;
+  padding: 10px 3px;
   position: absolute;
-  right: 2px;
+  right: 11px;
   top: 2px;
   z-index: 1002;
   opacity: 0.9;
 }
 
+/* style.css */
+.rounded-video {
+  border-radius: 20px;
+}
+
 .boxclose:before {
-  content: "×";
+  content: "✗";
 }
 
-#fade:hover ~ #boxclose {
-  display:none;
+/* Desktop styles */
+@media (min-width: 768px) {
+  #videoPopup {
+    width: 640px;
+    height: 360px;
+  }
 }
 
-.test:hover ~ .test2 {
-  display: none;
+/* Mobile styles */
+@media (max-width: 900px) {
+  #videoPopup {
+    width: 76%; /* Adjust this value to your preference */
+    height: auto;
+    max-width: 76%;
+    max-height: 90vh; /* Adjust this value to your preference */
+  }
+
+  #light {
+    width: 90%; /* Adjust this value to your preference */
+    height: auto;
+    max-width: 76%;
+    max-height: 90vh; /* Adjust this value to your preference */
+  }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 // இந்தக் குறியீடு `elementToggleFunc` எனப்படும் செயல்பாட்டை வரையறுக்கிறது, இது `classList.toggle()` முறையைப் பயன்படுத்தி கொடுக்கப்பட்ட உறுப்பில் CSS கிளாஸ் "செயலில்" இருப்பதை மாற்றுகிறது.
-const elementToggleFunc = function(elem) {
+const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
 
@@ -10,7 +10,7 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function() {
+sidebarBtn.addEventListener("click", function () {
   elementToggleFunc(sidebar);
 });
 
@@ -26,14 +26,14 @@ const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = function() {
+const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 };
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
-  testimonialsItem[i].addEventListener("click", function() {
+  testimonialsItem[i].addEventListener("click", function () {
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
@@ -53,13 +53,13 @@ const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 // toggle select dropdown on click
-select.addEventListener("click", function() {
+select.addEventListener("click", function () {
   elementToggleFunc(this);
 });
 
 // add event to all select items
 for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function() {
+  selectItems[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
@@ -71,7 +71,7 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 // filter function
-const filterFunc = function(selectedValue) {
+const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
@@ -87,7 +87,7 @@ const filterFunc = function(selectedValue) {
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
-  filterBtn[i].addEventListener("click", function() {
+  filterBtn[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
@@ -104,7 +104,7 @@ const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input fields
 for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function() {
+  formInputs[i].addEventListener("input", function () {
     // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
@@ -164,38 +164,78 @@ function expandText() {
 showMore();
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // pop up
 
-// Function to open the pop-up window
-function openVideoPopup() {
-  document.getElementById("videoPopup").style.display = "block";
-}
-
-// Add click event listener to the link
-document.getElementById("videoLink").addEventListener("click", openVideoPopup);
-
-
-
-window.document.onkeydown = function(e) {
+window.document.onkeydown = function (e) {
   if (!e) {
     e = event;
   }
   if (e.keyCode == 27) {
     lightbox_close();
   }
-}
+};
+
+var isVideoPlaying = false;
 
 function lightbox_open() {
-  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo1"); // Assuming you want to play the first video
   window.scrollTo(0, 0);
   document.getElementById('light').style.display = 'block';
   document.getElementById('fade').style.display = 'block';
   lightBoxVideo.play();
+  lightBoxVideo.muted = false; // Set to true to mute video on open
+  isVideoPlaying = true;
 }
 
+// close--------------------------------------------------
+
 function lightbox_close() {
-  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo1"); // Assuming you want to close the first video
   document.getElementById('light').style.display = 'none';
   document.getElementById('fade').style.display = 'none';
   lightBoxVideo.pause();
+  isVideoPlaying = false;
+}
+
+function switchTab(panelId) {
+  // Pause all videos
+  var videos = document.querySelectorAll("video");
+  videos.forEach(function (video) {
+    video.pause();
+  });
+
+  // Show the selected tab
+  var panels = document.querySelectorAll(".panel");
+  panels.forEach(function (panel) {
+    if (panel.id === panelId) {
+      panel.classList.add("active");
+    } else {
+      panel.classList.remove("active");
+    }
+  });
+
+  // Mark the selected tab button as active
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function (tab) {
+    if (tab.getAttribute("aria-controls") === panelId) {
+      tab.setAttribute("aria-selected", "true");
+    } else {
+      tab.setAttribute("aria-selected", "false");
+    }
+  });
 }
