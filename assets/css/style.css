@@ -3825,7 +3825,7 @@ video {
 }
 
 .imageContainer {
-  width: 580px;
+  width: 680px;
   height: 55vh;
   display: flex;
   align-items: center;
@@ -3954,7 +3954,7 @@ video {
   .imageContainer {
     overflow: hidden;
     border: 0;
-    border-radius: 0;
+    border-radius: 20;
   }
 
   .imageContainer,

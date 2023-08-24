@@ -297,7 +297,7 @@ document.querySelector(".switchCamera").addEventListener("click", function () {
 			}
 			videoElement.srcObject = null;
 			videoElement.setAttribute("crossorigin", "anonymous");
-			videoElement.src = "https://ismailvtl.github.io/images/video-codepen-dance.mp4";
+			videoElement.src = "https://raw.githubusercontent.com/follow-prince/project-images/main/my-video.mp4";
 			videoElement.setAttribute("data-iswebcam", "false");
 			videoElement.classList.remove("flipping-out");
 			videoElement.classList.add("flipping-in");
@@ -365,3 +365,21 @@ thumbnailButton.addEventListener("click", function () {
 		thumbnailButton.removeChild(heart);
 	}, 2000);
 });
+
+
+  // Function to open the lightbox
+  function lightbox_open() {
+    document.getElementById('light').style.display = 'block';
+    document.getElementById('fade').style.display = 'block';
+    // Start playing the video when the lightbox opens
+    document.getElementById('videoElement').play();
+  }
+
+  // Function to close the lightbox
+  function lightbox_close() {
+    // Pause the video when the lightbox is closed
+    document.getElementById('videoElement').pause();
+    document.getElementById('light').style.display = 'none';
+    document.getElementById('fade').style.display = 'none';
+  }
+
