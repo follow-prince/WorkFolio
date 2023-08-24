@@ -4,5 +4,6 @@
         "ELAVARASAN"
     ],
     "cmake.configureOnOpen": true,
-    "livePreview.defaultPreviewPath": "/index.html"
+    "livePreview.defaultPreviewPath": "/index.html",
+    "liveServer.settings.port": 5501
 }

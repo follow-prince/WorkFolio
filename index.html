@@ -794,38 +794,80 @@
           <section class="blog-posts">
             <ul class="blog-posts-list">
               <li class="blog-post-item">
-                <button class="glow-on-hover" onclick="refreshIframe1()" style="left: 40%; right: 60%;">Refresh</button><br>
-                <iframe id="myFrame1" src="https://prince-dev.vercel.app" width="100%" height="820"></iframe>
+                <div class="iphone">
+                  <div class="iphone-top">
+                    <span class="camera"></span>
+                    <span class="sensor"></span>
+                    <span class="speaker"></span>
+                  </div>
+                  <div class="top-bar"></div>
+                  <div class="iphone-screen">
+                    <iframe id="myFrame1" src="https://prince-dev.vercel.app" width="100%" height="680" style="zoom: 100%;" ></iframe>
+                  </div>
+                  <div class="buttons">
+                    <span class="on-off"></span>
+                    <span class="sleep"></span>
+                    <span class="up"></span>
+                    <span class="down"></span>
+                  </div>
+                  <div onclick="refreshIframe1()" class="iphone-bottom">
+                    <span></span>
+                  </div>
+                </div>
                 <script>
                   var iframe1 = document.getElementById('myFrame1');
                   function refreshIframe1() {
                     iframe1.src = iframe1.src;
                   }
-                  var iframeDocument1 = iframe1.contentDocument || iframe1.contentWindow.document;
-                  var iframeElement1 = iframeDocument1.querySelector('.example-element');
-                  iframeElement1.style.backgroundColor = 'red';
-                  iframe1.addEventListener('load', function() {
+                  iframe1.addEventListener('load', function () {
+                    var iframeDocument1 = iframe1.contentDocument || iframe1.contentWindow.document;
+                    var iframeElement1 = iframeDocument1.querySelector('.example-element');
+                    if (iframeElement1) {
+                      iframeElement1.style.backgroundColor = 'red';
+                    }
                     console.log('Iframe 1 has finished loading.');
                   });
                 </script>
               </li>
+            
               <li class="blog-post-item">
-                <button class="glow-on-hover" onclick="refreshIframe2()" style="left: 40%; right: 60%;">Refresh</button><br>
-                <iframe id="myFrame2" src="https://follow-prince.vercel.app" width="100%" height="820"></iframe>
+                <div class="iphone">
+                  <div class="iphone-top">
+                    <span class="camera"></span>
+                    <span class="sensor"></span>
+                    <span class="speaker"></span>
+                  </div>
+                  <div class="top-bar"></div>
+                  <div class="iphone-screen">
+                    <iframe id="myFrame2" src="https://follow-prince.vercel.app" width="100%" height="680" style="zoom: 100%;"  ></iframe>
+                  </div>
+                  <div class="buttons">
+                    <span class="on-off"></span>
+                    <span class="sleep"></span>
+                    <span class="up"></span>
+                    <span class="down"></span>
+                  </div>
+                  <div onclick="refreshIframe2()" class="iphone-bottom">
+                    <span></span>
+                  </div>
+                </div>
                 <script>
                   var iframe2 = document.getElementById('myFrame2');
                   function refreshIframe2() {
                     iframe2.src = iframe2.src;
                   }
-                  var iframeDocument2 = iframe2.contentDocument || iframe2.contentWindow.document;
-                  var iframeElement2 = iframeDocument2.querySelector('.example-element');
-                  iframeElement2.style.backgroundColor = 'red';
-                  iframe2.addEventListener('load', function() {
+                  iframe2.addEventListener('load', function () {
+                    var iframeDocument2 = iframe2.contentDocument || iframe2.contentWindow.document;
+                    var iframeElement2 = iframeDocument2.querySelector('.example-element');
+                    if (iframeElement2) {
+                      iframeElement2.style.backgroundColor = 'red';
+                    }
                     console.log('Iframe 2 has finished loading.');
                   });
                 </script>
               </li>
             </ul>
+
           </section>
         </article>
         <!-- #PORTFOLIO -->
