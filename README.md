@@ -6,27 +6,17 @@
 ![GitHub Language Count](https://img.shields.io/github/languages/count/follow-prince/WorkFolio?color=1f77b4&label=Total%20Languages&style=flat-square)
 ![GitHub Top Language](https://img.shields.io/github/languages/top/follow-prince/WorkFolio?color=7f0c7f&style=flat-square)
 ![GitHub Issues](https://img.shields.io/github/issues/follow-prince/WorkFolio?color=098f76&label=GitHub%20Issues&style=flat-square)
-![GitHub Pull Erequests](https://img.shields.io/github/issues-pr/follow-prince/WorkFolio?color=2c324f&label=GitHub%20Pull%20Requests&style=flat-square)
-![GitHub Latest Release](https://img.shields.io/github/v/release/follow-prince/WorkFolio?color=f5426f&label=Latest%20Release&style=flat-square)
-![GitHub Total Downloads](https://img.shields.io/github/downloads/follow-prince/WorkFolio/total?color=4a2600&label=Total%20Downloads&style=flat-square)
 ![Website Status](https://img.shields.io/website?down_message=Down%20%26%20Offline&label=Website%20Status&up_message=Up%20%26%20Online&url=https%3A%2F%2Fi-am-prince.vercel.app)
 
-**Live Preview: 👉🏽 [elavarasan.dev](https://i-am-prince.vercel.app)**
+**Live Preview: 👉🏽 [elavarasan.me](https://elavarasan.me)**
 
 ✨ Hello there, I'm ELAVARASAN. This is my personal website, which contains public information that anyone can find on the internet.
 
 ## 🎬 Captured Moment
+
 <div style="border: 4px solid white; display: inline-block; border-radius: 10px;">
   <img src="./assets/images/review.png" >
 </div>
-
-
-
-
-
-
-
-
 
 ## Features
 
@@ -38,9 +28,6 @@
 - HTML
 - CSS
 - JavaScript
-
-
-
 
 ## Setup and Usage
 
@@ -55,24 +42,18 @@ To customize the portfolio for your own use, follow these steps:
 2. Modify the CSS styles in the `styles.css` file to match your desired design.
 3. Add any additional pages or sections as needed.
 
-
-
-
-
-
 ## 💙 Contributing
 
-If you find any issues with this branch or would like to suggest changes, feel free to submit a pull request or open an issue. Please make sure to follow the [Contributing Guidelines](https://github.com/dileepabandara/dileepabandara.dev/blob/main/CONTRIBUTING.md) before your contribution.
+If you find any issues with this branch or would like to suggest changes, feel free to submit a pull request or open an issue. Please make sure to follow the [Contributing Guidelines](https://github.com/follow-prince) before your contribution.
 
 ## ❤️ Thanks
 
 Thanks to everyone who supported.
 
-
 ## 👨‍💻 Developed By
 
 ELAVARASAN
-[©elavarasan.dev](https://i-am-prince.vercel.app)
+[©elavarasan.dev](https://elavarasan.me)
 
 ## 💬 Contact
 

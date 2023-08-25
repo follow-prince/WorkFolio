@@ -501,6 +501,10 @@ main {
 }
 
 
+
+
+
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -4033,3 +4037,106 @@ video {
   opacity: 0;
   transition: bottom 2s ease, opacity 2s ease;
 }
+
+
+
+
+/* --------------------------------------------------------------- */
+
+/* Audio Added  */ 
+.social-item .social-link1 {
+  font-size: 1.2rem;
+
+
+}
+
+  .gradient-border::after {
+      color: white;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, #f06, #f90);
+      border-image-slice: 1;
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .social-link1 {
+      width: 1.2rem;
+      height: 1.3rem;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: hsl(240, 1%, 25%) 3%;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: .5rem;
+      text-align: center;
+    }
+
+    .social-link1:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -0.125rem;
+      left: -0.125rem;
+      background-size: 200%;
+      z-index: -1;
+      filter: blur(.3125rem);
+      width: calc(100% + .25rem);
+      height: calc(100% + .25rem);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: .625rem;
+    }
+
+    .social-link1:active {
+      color: #000;
+    }
+
+    .social-link1:active:after {
+      background: transparent;
+    }
+
+    .social-link1:hover:before {
+      opacity: 1;
+    }
+
+    .social-link1:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #323232;
+      left: 0;
+      top: 0;
+      border-radius: .625rem;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+

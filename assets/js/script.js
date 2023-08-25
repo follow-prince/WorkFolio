@@ -383,3 +383,18 @@ thumbnailButton.addEventListener("click", function () {
     document.getElementById('fade').style.display = 'none';
   }
 
+// audio section
+var pause = true;
+var button = document.getElementById('button');
+var music = document.getElementById('music');
+var icon = button.querySelector('ion-icon');
+
+button.addEventListener('click', function() {
+  if (pause) {
+    music.play();
+  } else {
+    music.pause();
+  }
+  pause = !pause;
+  icon.classList.toggle('playing', !pause);
+});
