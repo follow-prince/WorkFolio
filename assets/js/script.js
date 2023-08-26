@@ -398,3 +398,15 @@ button.addEventListener('click', function() {
   pause = !pause;
   icon.classList.toggle('playing', !pause);
 });
+
+
+
+
+$(document).ready(() => {
+  let typingElement = $('.typing');
+
+  typingElement.on('click', (e) => {
+    typingElement.removeClass('animate');
+    setTimeout(() => typingElement.addClass('animate'), 1);
+  })
+});

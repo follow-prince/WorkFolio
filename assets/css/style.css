@@ -4140,3 +4140,77 @@ video {
       }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+.typing.animate {
+  width: 21ch;
+  border-right: 0.1em solid black;
+  font-family: monospace;
+  font-size: 1.2em;
+  animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.5s steps(8) 2.5s, type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor:  green-cursor; /* Replace 'green-cursor.png' with your actual image */
+}
+
+
+
+.typing.animate::before { 
+  content: "Hello, I'm Elavarasan";
+  animation: type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21ch;
+  }
+}
+
+@keyframes type2 {
+  from {
+    width: 16ch;
+    content: "Hello, I'm Prince. "
+  }
+  to {
+    width: 20ch;
+    content: "Hello, I'm Prince. "
+  }
+}
+
+@keyframes type3 {
+  from {
+    width: 20ch;
+    content: "Hello, I'm Prince. Welcome to my Website!"
+  }
+  to {
+    width: 42ch;
+    content: "Hello, I'm Prince. Welcome to my Website!"
+  }
+}
+
+@keyframes writer {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes delete {
+  from {
+    width: 21ch;
+  }
+  to {
+    width: 16ch;
+  }
+}
