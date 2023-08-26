@@ -4153,10 +4153,10 @@ video {
 
 .typing.animate {
   width: 21ch;
-  border-right: 0.1em solid black;
+  border-right: 0.2em solid green;
   font-family: monospace;
   font-size: 1.2em;
-  animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.5s steps(8) 2.5s, type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+  animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.8s steps(8) 2.5s, type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
   overflow: hidden;
   white-space: nowrap;
   cursor:  green-cursor; /* Replace 'green-cursor.png' with your actual image */
@@ -4211,6 +4211,6 @@ video {
     width: 21ch;
   }
   to {
-    width: 16ch;
+    width: 13ch;
   }
 }
