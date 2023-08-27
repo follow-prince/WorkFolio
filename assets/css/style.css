@@ -3927,12 +3927,12 @@ video {
 }
 
 .thumbnail {
-  height: 48px;
+  height: 75px;
   width: 48px;
   background: #fff;
   overflow: hidden;
-  border-radius: 6px;
-  border: 0;
+  border-radius: 8px;
+  border: 1;
 }
 
 .switchCamera {
