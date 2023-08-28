@@ -2,16 +2,15 @@ import styled from 'styled-components';
 
 export const PersonInfoContainer = styled.div`
   max-width: 864px;
-  width: 100%;
+  width: 80%;
   height: 212px;
   display: flex;
-  background: ${props => props.theme['base-profile']};
-  box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
   padding: 2rem;
   gap: 2rem;
   img {
-    border-radius: 10px;
+    border-radius: 30px;
   }
   div {
     width: 100%;
@@ -24,14 +23,15 @@ export const PersonInfoContainer = styled.div`
       justify-content: space-between;
       align-items: center;
       h1 {
-        font-weight: 700;
-        font-size: 1.5rem;
+        color:white;
+        font-weight: 800;
+        font-size: 2.3rem;
         line-height: 130%;
       }
       a {
         font-weight: 700;
         font-size: 0.75rem;
-        line-height: 160%;
+        line-height: 100%;
         text-transform: uppercase;
         text-decoration: none;
         display: flex;
@@ -49,13 +49,16 @@ export const PersonInfoContainer = styled.div`
       p {
         margin-top: 0.5rem;
         word-wrap: break-word;
+        
       }
     }
     footer {
+      font-weight: 700;
+      font-size: 0.75rem;
       display: flex;
       height: 100%;
       align-items: flex-end;
-      gap: 1.5rem;
+      gap: 1rem;
       span {
         display: flex;
         align-items: center;
@@ -64,6 +67,7 @@ export const PersonInfoContainer = styled.div`
         i {
           color: ${props => props.theme['base-label']};
         }
+       
       }
       
     }
@@ -75,12 +79,32 @@ export const PersonInfoContainer = styled.div`
     height: auto;
     align-items: center;
     justify-content: center;
+    div {
+      header{
+      h1{
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+    }
+
+    footer {
+      span {
+      p {
+        font-size:0.5rem;
+       }
+      }
+    }
   }
   @media (max-width: 450px) {
     div {
       header {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.5rem;
+        h1{
+          font-weight: 700;
+          font-size: 1rem;
+        }
       }
       main {
         p {
@@ -91,6 +115,11 @@ export const PersonInfoContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center ;
+        span {
+        p {
+          font-size:0.5rem;
+         }
+        }
       }
     }
   }
