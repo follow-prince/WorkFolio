@@ -2476,31 +2476,38 @@ textarea.form-input::-webkit-resizer {
   position: relative;
   width: 25rem;
   height: 21.875rem;
-  left: 30% ;
+  left: 30%;
   right: 0%;
-
   perspective: 39.375rem;
   perspective-origin: center 3.125rem;
   transform: scale(1.2);
   filter: drop-shadow(0rem .625rem .3125rem rgba(0, 0, 0, 0.25));
 }
 
-/* Media query for mobile devices */
+/* Media query for smaller screens (mobile devices) */
 @media (max-width: 47.9375rem) {
   .book {
-    width: 6.25rem;
-    /* Adjust width for mobile */
+    width: .25rem;
     height: 18.75rem;
-    left: 38%;
-    /* Adjust height for mobile */
+    left: 48%;
     transform: none;
-    /* Remove the scaling for mobile */
     filter: none;
-    /* Remove drop shadow for mobile */
     /* You can add any other mobile-specific styles here */
- 
   }
 }
+
+/* Media query for larger screens (desktop devices) */
+@media (min-width: 48rem) {
+  .book {
+    width: 20rem; /* Adjust width for desktop */
+    height: 20.5rem; /* Adjust height for desktop */
+    left: 30%; /* Adjust position for desktop */
+    transform: scale(1.2); /* Keep the scaling for desktop */
+    filter: drop-shadow(0rem .625rem .3125rem rgba(0, 0, 0, 0.25)); /* Keep the drop shadow for desktop */
+    /* You can add any other desktop-specific styles here */
+  }
+}
+
 
 .page {
     width: 13.125rem;
@@ -3641,7 +3648,7 @@ textarea.form-input::-webkit-resizer {
 /* ----------------------------------------------------- */
 
 /* this section is the mobile frame  */
-*,
+
 *:after,
 *:before {
   box-sizing: border-box;
@@ -3660,6 +3667,16 @@ textarea.form-input::-webkit-resizer {
   /* Scale so that the iPhone fits in view */
   transform: scale(0.8);
 }
+@media (max-width: 400px) {
+  .iphone{
+    width: 290px;
+    height: 550px;
+    margin: -6%;
+    padding:0px;
+    transform: scale(0.8);
+  }
+}
+
 
 .iphone-top {
   padding: 5px 110px 40px;
@@ -3723,10 +3740,16 @@ textarea.form-input::-webkit-resizer {
   width: 375px;
   margin: 0 auto;
   border: 1px solid rgba(0, 0, 0, 0.9);
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media (max-width: 450px){
+  .iphone-screen {
+    width: 253px;
+    height: 370px;
+  }
 }
 
 .iphone-screen img {
@@ -4150,7 +4173,7 @@ video {
 
 
 
-
+/* Default font size for desktop */
 .typing.animate {
   width: 21ch;
   border-right: 0.2em solid green;
@@ -4159,9 +4182,38 @@ video {
   animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.8s steps(8) 2.5s, type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
   overflow: hidden;
   white-space: nowrap;
-  cursor:  green-cursor; /* Replace 'green-cursor.png' with your actual image */
+  cursor: green-cursor;
 }
 
+/* Adjust font size for smaller screens (mobile) */
+@media (max-width: 600px) {
+  .typing.animate {
+    font-size: 0.9em;
+  }
+}
+
+/* Further adjustments for even smaller screens if needed */
+@media (max-width: 350px) {
+  .typing.animate {
+    font-size: 0.7em;
+  }
+}
+
+/* Adjust font size for larger screens (desktop) */
+@media (min-width: 950px) {
+  .typing.animate {
+    font-size: 1.5em;
+  }
+}
+
+/* Additional adjustments for even larger screens if needed */
+@media (min-width: 1200px) {
+  .typing.animate {
+    font-size: 1.8em;
+  }
+}
+  
+    
 
 
 .typing.animate::before { 
@@ -4213,4 +4265,13 @@ video {
   to {
     width: 13ch;
   }
+}
+
+
+.book-story{
+color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  
 }
