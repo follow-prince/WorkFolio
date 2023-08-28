@@ -61,8 +61,23 @@ export const PostDetailCard = styled.div`
         i {
           color: ${props => props.theme['base-label']};
         }
+        p {
+          font-size:1rem;
+         }
+        
       }
     }
+    @media (max-width:700px) {
+      footer {
+        span{
+          p{
+            font-size:0.6rem;
+          }
+        }
+      }
+
+    }
+
 
     @media (max-width:500px) {
       div {
@@ -72,6 +87,12 @@ export const PostDetailCard = styled.div`
       }
       footer {
         flex-direction: column;
+        span{
+          p {
+            font-size:0.8rem;
+
+          }
+        }
       }
     }
 `
