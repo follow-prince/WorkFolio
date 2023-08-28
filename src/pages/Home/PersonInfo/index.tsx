@@ -39,7 +39,7 @@ export function PersonInfo() {
 
   return (
     <PersonInfoContainer>
-      <img width={148} height={148} src={userInfo?.imgUrl} alt="Person Photo" />
+      <img width={128} height={128} src={userInfo?.imgUrl} alt="Person Photo" />
       <div>
         <header>
           <h1>{userInfo?.name}</h1>
