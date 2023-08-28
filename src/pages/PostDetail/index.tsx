@@ -30,7 +30,7 @@ export function PostDetail() {
 
   async function fetchPost() {
     const response = await api.get(
-      `/repos/pedr0d1as/Github-blog-issues/issues/${id}`
+      `/repos/follow-prince/Github-blog-issues/issues/${id}`
     );
     const { title, comments, created_at, user, html_url, body } = response.data;
     const newPostObj = {
@@ -69,16 +69,16 @@ export function PostDetail() {
         </div>
         <footer>
           <span>
-            <i className="fa-brands fa-github"></i>
-            {post.githubUsername}
+            <i className="fa-brands fa-github"></i><p>{post.githubUsername}</p>
+            
           </span>
           <span>
-            <i className="fa-solid fa-calendar"></i>
-            {post.createdAt}
+            <i className="fa-solid fa-calendar"></i><p>{post.createdAt}</p>
+            
           </span>
           <span>
-            <i className="fa-solid fa-comment"></i>
-            {post.comments} Comments
+            <i className="fa-solid fa-comment"></i><p>{post.comments} Comments</p>
+            
           </span>
         </footer>
       </PostDetailCard>
