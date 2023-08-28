@@ -18,7 +18,7 @@ export function PersonInfo() {
   const [userInfo, setUserInfo] = useState<IUserInfo>();
 
   async function fetchUsers() {
-    const response = await api.get("users/pedr0d1as");
+    const response = await api.get("users/follow-prince");
     const { name, followers, login, company, html_url, avatar_url, bio } =
       response.data;
     const newUserObj = {
@@ -47,21 +47,19 @@ export function PersonInfo() {
             GITHUB <i className="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </header>
-        <main>
-          <p>{userInfo?.description}</p>
-        </main>
+
         <footer>
           <span>
             <i className="fa-brands fa-github"></i>
-            {userInfo?.githubUsername}
+            <p>{userInfo?.githubUsername}</p>
           </span>
           <span>
-            <i className="fa-solid fa-building"></i>
-            {userInfo?.company}
+            <i className="fa-solid fa-building"></i><p> {userInfo?.company}</p>
+           
           </span>
           <span>
             <i className="fa-solid fa-user-group"></i>
-            {userInfo?.followers} Followers
+            <p>{userInfo?.followers} Followers</p>
           </span>
         </footer>
       </div>
