@@ -6,8 +6,8 @@ width: 100%;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 2rem;
+  gap: 0.25rem;
+  padding: 1rem;
 
   background: ${props => props.theme['base-post']};
   border-radius: 10px;
@@ -26,7 +26,7 @@ width: 100%;
     h1 {
       font-weight: 700;
       font-size: 1.125rem;
-      line-height: 160%;
+      line-height: 100%;
       color: ${props => props.theme['base-title']};
       text-align: justify;
     }
