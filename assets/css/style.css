@@ -1180,7 +1180,7 @@ main {
 .blog-posts-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .blog-post-item>a {
@@ -3654,30 +3654,65 @@ textarea.form-input::-webkit-resizer {
   box-sizing: border-box;
 }
 
+/* Default styling for larger screens */
 .iphone {
+  /* Add box shadow and border styles */
   box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999, 0 0 30px 0px rgba(0, 0, 0, 0.7);
   border: 5px solid #d9dbdc;
+  /* Set background color */
   background: #f8f8f8;
-  padding: 20px;
+  /* Add padding and border radius */
+  padding: 5px;
   border-radius: 50px;
-  height: 777px;
-  width: 383px;
+  /* Set fixed height and width */
+  height: 877px;
+  width: 453px;
+  /* Center horizontally and add spacing */
   position: relative;
-  margin: 0.5% auto;
-  /* Scale so that the iPhone fits in view */
-  transform: scale(0.8);
-  right: 10%;
+  margin: 0.1% auto;
+  /* Scale to fit within view */
+  transform: scale(0.7);
+  /* Adjust horizontal position */
+  right:4rem;
 }
-@media (max-width: 350px) {
+@media (max-width: 550px){
   .iphone{
-    width: 250px;
-    height: 550px;
-    margin: -10%;
-    padding:0px;
-    transform: scale(0.7);
-    right: -10%;
+    right: 10%;
   }
 }
+
+/* Media query for smaller screens */
+@media (max-width: 400px) {
+  .iphone {
+    /* Adjust dimensions for smaller screens */
+    width: 340px;
+    height: 650px;
+    /* Adjust negative margin for spacing */
+    margin: -10% auto;
+    /* Remove padding */
+    padding: 0;
+    /* Adjust scaling */
+    transform: scale(0.8);
+    /* Adjust horizontal position */
+    right: 1%;
+  }
+}
+@media (max-width: 330px) {
+  .iphone {
+    /* Adjust dimensions for smaller screens */
+    width: 270px;
+    height: 550px;
+    /* Adjust negative margin for spacing */
+    margin: -10% auto;
+    /* Remove padding */
+    padding: 0;
+    /* Adjust scaling */
+    transform: scale(0.8);
+    /* Adjust horizontal position */
+    right: 1%;
+  }
+}
+
 
 
 .iphone-top {
@@ -3738,8 +3773,8 @@ textarea.form-input::-webkit-resizer {
 .iphone-screen {
   background: #eee;
   border: 1px solid #fff;
-  height: 597px;
-  width: 335px;
+  height: 677px;
+  width: 405px;
   margin: 0 auto;
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 15px;
@@ -3747,10 +3782,16 @@ textarea.form-input::-webkit-resizer {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (max-width: 350px){
+@media (max-width: 400px){
   .iphone-screen {
-    width: 233px;
-    height: 370px;
+    width: 320px;
+    height: 480px;
+  }
+}
+@media (max-width: 330px){
+  .iphone-screen {
+    width: 250px;
+    height: 380px;
   }
 }
 
