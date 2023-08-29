@@ -34,7 +34,7 @@ export const SearchSection = styled.section`
   small {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 160%;
     color: ${props => props.theme['base-span']};
    }

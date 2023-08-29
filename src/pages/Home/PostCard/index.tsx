@@ -18,12 +18,11 @@ export function PostCard({ post }: IPostCard) {
   return (
     <PostCardContainer to={`/${number}`}>
       <header>
+        <span>{formattedDate}</span> 
         <h1>{title}</h1>
-        <span>{formattedDate}</span>
+        
       </header>
-      <main>
-        <p>{formatText(body, 80)}</p>
-      </main>
+  
     </PostCardContainer>
   );
 }

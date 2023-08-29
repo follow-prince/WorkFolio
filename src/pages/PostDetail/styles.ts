@@ -119,7 +119,7 @@ export const NavButton = styled(NavLink)`
 export const PostDetailContent = styled.main`
   max-width: 864px;
   width: 100%;
-  padding: 2.5rem;
+  padding: 2rem;
   white-space: pre-wrap;
   overflow: hidden;
   div {
@@ -130,16 +130,19 @@ export const PostDetailContent = styled.main`
   ::-webkit-scrollbar {
     width: 10px;
     height: 8px;
+
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${props => props.theme['base-profile']};
+    background: gray;
+    border-radius:30px;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: ${props => props.theme.blue};
+    background: #21f505;
+    border-radius:30px;
   }
   }
 

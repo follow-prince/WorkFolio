@@ -5,7 +5,7 @@ export const PostCardContainer = styled(NavLink)`
 width: 100%;
   text-decoration: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.25rem;
   padding: 1rem;
 
@@ -13,7 +13,7 @@ width: 100%;
   border-radius: 10px;
   border: 2px solid transparent;
 
-  height: 260px;
+  height: 130px;
   overflow: hidden;
 
   transition: border 0.2s;
@@ -24,17 +24,18 @@ width: 100%;
     justify-content: space-between;
     gap: 1rem;
     h1 {
-      font-weight: 700;
-      font-size: 1.125rem;
-      line-height: 100%;
+      font-weight: 500;
+      font-size: 1rem;
+        line-height: 1.5;
       color: ${props => props.theme['base-title']};
-      text-align: justify;
+      
     }
     
     span {
-      font-size: 0.875rem;
-      line-height: 160%;
+      font-size: 0.7rem;
+      line-height: 1.5;
       color: ${props => props.theme['base-span']};
+      
       
     }
   }
@@ -49,7 +50,10 @@ width: 100%;
     }
   }
 
-  &:hover {
-    border: 2px solid ${props => props.theme['base-label']};
-  }
+
+
+&:hover {
+  border: 2px solid ${props => props.theme['base-label']};
+}
+
 `;
