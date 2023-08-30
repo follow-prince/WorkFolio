@@ -934,6 +934,38 @@
                 <span>Send Message</span>
               </button>
             </form>
+            <script>
+              async function sendMail() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                const data = {
+                  to: 'bar@example.com', // Replace with the recipient's email address
+                  subject: 'Hello',
+                  text: message
+                };
+
+                const response = await fetch('/send-email', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                  alert('Email sent successfully!');
+                } else {
+                  alert('Email sending failed.');
+                }
+
+                return false; // Prevent form submission
+              }
+            </script>
+
+
+
             
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
             <script type="text/javascript">
