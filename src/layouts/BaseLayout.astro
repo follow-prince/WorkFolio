@@ -1,0 +1,192 @@
+---
+// Learn about using Astro layouts:
+// https://docs.astro.build/en/core-concepts/layouts/
+
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<MainHead title={title} description={description} />
+	</head>
+	<body>
+		<div class="stack backgrounds">
+			<Nav />
+			<slot />
+			<Footer />
+		</div>
+
+		<script>
+			// Add “loaded” class once the document has completely loaded.
+			addEventListener('load', () => document.documentElement.classList.add('loaded'));
+		</script>
+
+		<style>
+			:root {
+				--_placeholder-bg: linear-gradient(transparent, transparent);
+				--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
+				--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
+				--bg-image-subtle-1: var(--_placeholder-bg);
+				--bg-image-subtle-2: var(--_placeholder-bg);
+				--bg-image-footer: var(--_placeholder-bg);
+				--bg-svg-blend-mode: overlay;
+				--bg-blend-mode: darken;
+				--bg-image-aspect-ratio: 2.25;
+				--bg-scale: 1.68;
+				--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
+				--bg-gradient-size: calc(var(--bg-scale) * 100%);
+				--bg-gradient-onyx: linear-gradient(to bottom right,
+						hsl(240, 1%, 25%) 3%,
+						hsl(0, 0%, 19%) 97%);
+					--bg-gradient-jet: linear-gradient(to bottom right,
+						hsla(240, 1%, 18%, 0.251) 0%,
+						hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+					--bg-gradient-yellow-1: linear-gradient(to bottom right,
+						hsl(293, 100%, 50%) 0%,
+						hsla(36, 100%, 69%, 0) 50%);
+					--bg-gradient-yellow-2: linear-gradient(135deg,
+						hsla(45, 100%, 71%, 0.251) 0%,
+						hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+					--border-gradient-onyx: linear-gradient(to bottom right,
+						hsl(0, 0%, 25%) 0%,
+						hsla(0, 0%, 25%, 0) 50%);
+					--text-gradient-yellow: linear-gradient(to right,
+						hsl(291, 100%, 50%),
+						hsl(292, 100%, 50%));
+
+					/* solid */
+
+					--jet: hsl(0, 0%, 22%);
+					--onyx: hsl(240, 1%, 17%);
+					--eerie-black-1: hsl(240, 2%, 13%);
+					--eerie-black-2: hsl(240, 2%, 12%);
+					--smoky-black: hsl(0, 0%, 7%);
+					--white-1: hsl(0, 0%, 100%);
+					--white-2: hsl(0, 0%, 98%);
+					--orange-yellow-crayola: rgba(162, 0, 255, 1);
+					--vegas-gold:rgba(162, 0, 255, 1);
+					--light-gray: hsl(0, 0%, 84%);
+					--light-gray-70: hsla(0, 0%, 84%, 0.7);
+					--bittersweet-shimmer: rgba(162, 0, 255, 1);
+
+					/**
+					* typography
+					*/
+
+					/* font-family */
+					--ff-poppins: 'Poppins', sans-serif;
+
+					/* font-size */
+					--fs-1: 1.5rem;
+					--fs-2: 1.125rem;
+					--fs-3: 1.0625rem;
+					--fs-4: 1rem;
+					--fs-5: .9375rem;
+					--fs-6: .875rem;
+					--fs-7: .8125rem;
+					--fs-8: .6875rem;
+
+					/* font-weight */
+					--fw-300: 300;
+					--fw-400: 400;
+					--fw-500: 500;
+					--fw-600: 600;
+
+					/**
+					* shadow
+					*/
+
+					--shadow-1: -0.25rem .5rem 1.5rem hsla(0, 0%, 0%, 0.25);
+					--shadow-2: 0 1rem 1.875rem hsla(0, 0%, 0%, 0.25);
+					--shadow-3: 0 1rem 2.5rem hsla(0, 0%, 0%, 0.25);
+					--shadow-4: 0 1.5625rem 3.125rem hsla(0, 0%, 0%, 0.15);
+					--shadow-5: 0 1.5rem 5rem hsla(0, 0%, 0%, 0.25);
+
+					/**
+					* transition
+					*/
+
+					--transition-1: 0.25s ease;
+					--transition-2: 0.5s ease-in-out;
+
+			}
+
+			:root.theme-dark {
+				--bg-image-main: url('/assets/backgrounds/bg-main-dark-800w.jpg');
+				--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
+				--bg-svg-blend-mode: darken;
+				--bg-blend-mode: lighten;
+			}
+
+			/* These backgrounds are displayed below the fold, so we lazy load them
+			   once the `.loaded` class has been set.  */
+			:root.loaded {
+				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
+				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
+				--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
+			}
+			:root.loaded.theme-dark {
+				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
+				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
+				--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
+			}
+
+			@media (min-width: 50em) {
+				:root {
+					--bg-scale: 1;
+					--bg-image-main: url('/assets/backgrounds/bg-main-light-1440w.jpg');
+				}
+				:root.theme-dark {
+					--bg-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
+				}
+
+				:root.loaded {
+					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
+					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
+					--bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
+				}
+				:root.loaded.theme-dark {
+					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
+					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
+					--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
+				}
+			}
+
+			.backgrounds {
+				min-height: 100%;
+				isolation: isolate;
+				background:
+					/*noise*/
+					url('/assets/backgrounds/noise.png') top center/220px repeat,
+					/*footer*/ var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat,
+					/*header1*/ var(--bg-image-main-curves) top center/var(--bg-gradient-size) no-repeat,
+					/*header2*/ var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,
+					/*base*/ var(--gray-999);
+				background-blend-mode: /*noise*/
+					overlay,
+					/*footer*/ var(--bg-blend-mode),
+					/*header1*/ var(--bg-svg-blend-mode),
+					/*header2*/ normal,
+					/*base*/ normal;
+			}
+			@media (forced-colors: active) {
+				/* Deactivate custom backgrounds for high contrast users. */
+				.backgrounds {
+					background: none;
+					background-blend-mode: none;
+					--bg-gradient-size: none;
+				}
+			}
+		</style>
+	</body>
+</html>

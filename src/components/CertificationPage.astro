@@ -1,0 +1,63 @@
+---
+---
+
+<section class="box skills">
+    <h2>Mentions</h2>
+					<p>
+						I have additional valid certifications. Take a look below to find out more.
+					</p>
+
+
+    
+</section>
+
+
+
+<style>
+	
+.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 0.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+ .moved-word::first-word {
+    float: left;
+    margin-right: 5px; /* Adjust the spacing as needed */
+    font-size: 15px;
+  }
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+      
+     
+
+	}
+    .skills{
+        display: grid;
+        gap: 1rem;
+    }
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			  font-size: 20px;
+			gap: 1rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

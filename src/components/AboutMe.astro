@@ -1,0 +1,60 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+    <h2>About Me</h2>
+    <p>
+        <span class="first-word">I'm</span> passionate about turning my love for development into a fulfilling career. I thrive on learning, generating innovative ideas, and honing my open-source skills. This website showcases my development projects and skills, aiming for efficient and visually appealing software that offers seamless user experiences. <br><br> I specialize in front-end and back-end development, tailoring solutions to unique project needs. Whether you're a client, developer, or just curious, explore my portfolio and connect for collaboration. <br><br> Thank you for visiting, and let's create remarkable digital experiences together!
+    </p>
+</section>
+
+
+<style>
+	
+.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 0.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+ .moved-word::first-word {
+    float: left;
+    margin-right: 5px; /* Adjust the spacing as needed */
+    font-size: 15px;
+  }
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+      
+     
+
+	}
+    .skills{
+        display: grid;
+        gap: 1rem;
+    }
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			  font-size: 20px;
+			gap: 1rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
