@@ -1,7 +1,7 @@
 ---
 title: Cybersecurity Blog Introduction
 publishDate: 2023-09-11 22:43:00
-img:https://vitbhopal.ac.in/file/2022/04/Cyber-Security1.jpg
+img: https://vitbhopal.ac.in/file/2022/04/Cyber-Security1.jpg
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   We paired with a cutting-edge music API and a team of horticulturalists
