@@ -16,7 +16,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 import AboutMe from '../components/AboutMe.astro';
-import BookGallery from '../components/BookGallery.astro';
+
 import CertificationPage from '../components/CertificationPage.astro';
 
 
@@ -44,7 +44,6 @@ const projects = (await getCollection('work'))
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Blog Creator</Pill>
 					</div>
 				</Hero>
-
 				 <div class="myCard">
         <div class="innerCard">
             <div class="frontSide">
@@ -65,6 +64,7 @@ const projects = (await getCollection('work'))
             </div>
         </div>
     </div>
+
 				
 
 				
@@ -89,9 +89,7 @@ const projects = (await getCollection('work'))
 			<div class="wrapper stack gap-8 lg:gap-20">
 			<CertificationPage />
 			</div>
-			<div class="wrapper stack gap-8 lg:gap-20">
-			<BookGallery     />
-			</div>
+			
 			<!-- my work section -->
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -133,6 +131,7 @@ const projects = (await getCollection('work'))
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
+		
 	}
 
 	.roles {
@@ -357,4 +356,5 @@ const projects = (await getCollection('work'))
     opacity: 0.3;
   }
 }
+
 </style>
