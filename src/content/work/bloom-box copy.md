@@ -1,14 +1,13 @@
 ---
 title: Introduction to Astro Framework 
-publishDate: 2023-09-12 06:43:00
+publishDate: 2023-09-12 06:48:00
 img: https://kinsta.com/wp-content/uploads/2023/05/introduction-to-astro-1024x512.jpg
 img_alt: Astro Framework Introduction
-description: Astro is a modern web development framework and static site generator that combines the benefits of both static and dynamic web development. It enables developers to create fast, secure, and maintainable websites by generating static HTML at build time and enhancing it with JavaScript as needed. Key features include incremental static generation (ISG), single-file components, excellent performance, framework agnosticism, and flexible data loading strategies. With Astro, you can build high-performance websites efficiently while enjoying the flexibility of modern web development practices.
+description: Modern, fast, secure web framework with ISG, single-file components, and flexible data loading.
 tags:
   - AstroFramework 
-  - WebsiteDeveplopment
+  - Static
   - Lightweight
-  - StaticWebsite
 ---
 
 
