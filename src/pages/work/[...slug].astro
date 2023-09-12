@@ -58,6 +58,8 @@ const { Content } = await entry.render();
 			</div>
 			</div>
 		</div>
+
+
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -73,6 +75,8 @@ const { Content } = await entry.render();
 		box-shadow: var(--shadow-sm);
 		border-radius: 1.5rem;
 			padding: 1.5rem;
+			  transform: scale(1); /* This scales the element to 1.5 times its original size */
+
 
 }
 
@@ -121,7 +125,7 @@ const { Content } = await entry.render();
 	.content :global(h3),
 	.content :global(h4),
 	.content :global(h5) {
-		margin: 1rem 0;
+		margin: 1rem 1rem;
 	}
 
 	.content :global(img) {
@@ -163,7 +167,7 @@ const { Content } = await entry.render();
 
 		.details {
 			flex-direction: row;
-			gap: 2.5rem;
+			gap: 1.5rem;
 		}
 
 		
