@@ -12,6 +12,9 @@ tags:
 
 ##### Object-oriented programming(OOPS)
 
+
+
+
 > Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
 
 4 pillars of OOPS are:
@@ -47,7 +50,7 @@ Using inheritance means defining a parent-child relationship between classes, by
 
 Java does not allow multiple inheritance through classes but it allows it through interfaces.
 
-### Polymorphism
+##### Polymorphism
 
 Poly means many and Morph means forms. Polymorphism is the process in which an object or function takes different forms. There are 2 types of Polymorphism :
 
@@ -102,8 +105,8 @@ Output:
 ```
 
 
-Does Abstract class have constructor?
-------------
+##### Does Abstract class have constructor?
+
 
 Yes, abstract classes have constructor. Either you can provide it or the default one will be provided by Java. Now, you must be wondering if you cannot create an object of abstract class then what is the need of a constructor.
 One thing you must know is that the constructors are used when you are creating an object of a class, to initialize the data members of that class and your abstract class can have data members.
