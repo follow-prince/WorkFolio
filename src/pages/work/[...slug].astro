@@ -43,6 +43,10 @@ const { Content } = await entry.render();
 					</Hero>
 				</div>
 			</header>
+
+
+			<div class="wrapper stack gap-8 lg:gap-20">
+			<div class="blog-container">
 			<main class="wrapper">
 				<div class="stack gap-10 content">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
@@ -51,12 +55,30 @@ const { Content } = await entry.render();
 					</div>
 				</div>
 			</main>
+			</div>
+			</div>
 		</div>
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
+
+.blog-container{
+	
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 0.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+		border-radius: 1.5rem;
+			padding: 1.5rem;
+
+}
+
+/* ============================================================================= */
+
+	
 	header {
 		padding-bottom: 2.5rem;
 		border-bottom: 1px solid var(--gray-800);
