@@ -13,12 +13,27 @@ const {
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content={Astro.generator} />
+
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="I'm a passionate software developer and open-source enthusiast hailing from Chennai, India. Although my educational background is in B.Com, my true passion lies in web development. Currently, I am pursuing my MCA and actively working towards honing my skills in this exciting field.">
+    <meta name="author" content="Prince">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="ELAVARASAN" /> <!-- website name -->
+	<meta property="og:site" content="https://elavarasan.me" /> <!-- website link -->
+	<meta property="og:title" content="Portfolio"/> <!-- title shown in the actual shared post -->
+	<meta property="og:image" content="https://raw.githubusercontent.com/follow-prince/WorkFolio/main/public/assets/Screenshot%20from%202023-09-11%2021-19-27.png" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="https://elavarasan.me" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+
+
 <title>{title}</title>
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
