@@ -1,14 +1,13 @@
 ---
-title: h2.0
-publishDate: 2019-10-02 00:00:00
-img: /assets/stock-4.jpg
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
-description: |
-  We developed brand positioning and design assets for the launch
-  of a new colored water product.
+title: Java Basic
+publishDate: 2023-09-13 07:10:00
+img: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvmFgfZc893c1hJ3DjN-JC3kqNCL3c34XBig&usqp=CAU
+img_alt: java introduction 
+description: We are providing Java basics and tricks and tips. 
 tags:
-  - Design
-  - Branding
+  - JAVA
+  - Programming
+  - Basics
 ---
 
 ##### Java
