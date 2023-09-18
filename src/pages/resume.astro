@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import { Icon } from 'astro-icon'
 import Hero from "../components/Hero.astro";
 ---
 
@@ -20,10 +20,7 @@ import Hero from "../components/Hero.astro";
          
           <section class="timeline">
             <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-              <h3 class="h2">Education</h3>
+              <h4 class="h3"><h1><b>Education:</b></h1>The cornerstone of growth, unlocking endless possibilities.</h4>
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
@@ -63,7 +60,7 @@ import Hero from "../components/Hero.astro";
               <div class="icon-box">
                 <ion-icon name="business"></ion-icon>
               </div>
-              <h3 class="h2">Experience</h3>
+              <h4 class="h2"><h1><b>Experience:</b></h1>Bridging Knowledge to Innovation, one project at a time.</h4>
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
@@ -104,7 +101,7 @@ import Hero from "../components/Hero.astro";
               <div class="icon-box">
                 <ion-icon name="logo-microsoft"></ion-icon>
               </div>
-              <h3 class="h3">Volunteering</h3>
+              <h4 class="h3"><h1><b>Volunteering:</b></h1>Dedication to Service and Impactful Giving</h4>
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
@@ -319,12 +316,24 @@ import Hero from "../components/Hero.astro";
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
-  top: -1.5625rem;
+  top: -1.4625rem;
   left: -1.875rem;
   width: .0625rem;
   height: calc(100% + 3.125rem);
   background: var(--jet);
 }
+
+@media (max-width: 400px) {
+  .timeline-item:not(:last-child)::before {
+    top: -1.9625rem;
+  }
+}
+@media (max-width: 600px) {
+  .timeline-item:not(:last-child)::before {
+    top: -1.9625rem;
+  }
+}
+
 
 .timeline-item::after {
   content: "";
@@ -412,7 +421,11 @@ import Hero from "../components/Hero.astro";
   .timeline-text {
     max-width: 43.75rem;
   }
+.title-wrapper{
+  border: 1px solid;
+  padding: .5rem;
 
+}
 
 
   

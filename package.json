@@ -14,6 +14,7 @@
     "@astrojs/tailwind": "^5.0.0",
     "@astrojs/vercel": "^4.0.5",
     "@canvasjs/react-charts": "^1.0.0",
+    "@coreui/react": "^5.0.0-alpha.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.9",
@@ -22,7 +23,6 @@
     "@types/react-dom": "^18.2.7",
     "@vercel/analytics": "^1.0.2",
     "astro": "^3.0.12",
-    "astro-icon": "^0.8.1",
     "astro-iconify": "^1.2.0",
     "chart.js": "^4.4.0",
     "primeflex": "^3.3.1",
@@ -34,6 +34,7 @@
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
+    "astro-icon": "^0.8.1",
     "daisyui": "^3.7.3"
   }
 }
