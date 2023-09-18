@@ -116,7 +116,7 @@ const { Content } = await entry.render();
 	}
 
 	.content > :global(* + *) {
-		margin-top: 1rem;
+		margin-top: 0rem;
 	}
 
 	.content :global(h1),
@@ -124,7 +124,9 @@ const { Content } = await entry.render();
 	.content :global(h3),
 	.content :global(h4),
 	.content :global(h5) {
-		margin: 1rem 1rem;
+		margin: 0.5rem ;
+		margin-top: 5rem;
+		font-size: medium;
 	}
 
 	.content :global(img) {
@@ -132,6 +134,7 @@ const { Content } = await entry.render();
 		box-shadow: var(--shadow-sm);
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
+		margin-top: 2rem;
 	}
 
 	.content :global(blockquote) {
