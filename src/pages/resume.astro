@@ -23,7 +23,7 @@ import Hero from "../components/Hero.astro";
               <div class="icon-box">
                 <ion-icon name="book-outline"></ion-icon>
               </div>
-              <h3 class="h2">Education</h3>
+<h3 class="h2" style="border: 1px solid rgba(255, 255, 255, 0.329); padding: 8px;">Education</h3>
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
@@ -63,7 +63,7 @@ import Hero from "../components/Hero.astro";
               <div class="icon-box">
                 <ion-icon name="business"></ion-icon>
               </div>
-              <h3 class="h2">Experience</h3>
+              <h3 class="h2" style="border: 1px solid rgba(255, 255, 255, 0.329); padding: 8px;" >Experience</h3>
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
@@ -104,7 +104,7 @@ import Hero from "../components/Hero.astro";
               <div class="icon-box">
                 <ion-icon name="logo-microsoft"></ion-icon>
               </div>
-              <h3 class="h3">Volunteering</h3>
+              <h3 class="h3"style="border: 1px solid rgba(255, 255, 255, 0.329); padding: 8px;">Volunteering</h3>
             </div>
             <ol class="timeline-list">
               <li class="timeline-item">
@@ -289,6 +289,19 @@ import Hero from "../components/Hero.astro";
   align-items: center;
   gap: .9375rem;
   margin-bottom: 1.5625rem;
+  
+}
+@media screen and (max-width: 400px) {
+  .timeline .title-wrapper {
+      margin-bottom: 1.0rem;
+
+  }
+}
+@media screen and (max-width: 700px) {
+  .timeline .title-wrapper {
+      margin-bottom: 1.09999999rem;
+
+  }
 }
 
 .timeline-list {
@@ -325,6 +338,7 @@ import Hero from "../components/Hero.astro";
   height: calc(100% + 3.125rem);
   background: var(--jet);
 }
+
 
 .timeline-item::after {
   content: "";
