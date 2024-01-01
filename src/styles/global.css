@@ -1,6 +1,9 @@
 /* Global variables */
 :root {
 	/* Colors */
+	--github-stats-box:#020202c0;
+	--github-stats-box-a: #02020288;
+	--github-show-box-background: rgba(255, 255, 255, 0.705);
 	--gray-0: #090b11;
 	--gray-50: #141925;
 	--gray-100: #283044;
@@ -74,6 +77,9 @@
 }
 
 :root.theme-dark {
+	--github-stats-box: #f7f7f7c9;
+	--github-stats-box-a: #cfcfcf77;
+	--github-show-box-background: rgba(0, 0, 0, 0.719);
 	--gray-0: #ffffff;
 	--gray-50: #f3f4f7;
 	--gray-100: #e3e6ee;
