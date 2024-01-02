@@ -49,7 +49,7 @@ const { Content } = await entry.render();
 			<div class="blog-container">
 			<main class="wrapper">
 				<div class="stack gap-10 content">
-					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					<!-- {entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />} -->
 					<div class="content">
 						<Content />
 					</div>
@@ -74,7 +74,6 @@ const { Content } = await entry.render();
 		box-shadow: var(--shadow-sm);
 		border-radius: 1.5rem;
 			padding: 0.2rem;
-			  transform: scale(1); /* This scales the element to 1.5 times its original size */
 
 
 }
@@ -83,7 +82,7 @@ const { Content } = await entry.render();
 
 	
 	header {
-		padding-bottom: 2.5rem;
+		padding-bottom: 0;
 		border-bottom: 1px solid var(--gray-800);
 	}
 
@@ -94,7 +93,7 @@ const { Content } = await entry.render();
 	.details {
 		display: flex;
 		flex-direction: column;
-		padding: 0.5rem;
+		padding: 0;
 		gap: 1.5rem;
 		justify-content: space-between;
 		align-items: center;
@@ -113,7 +112,7 @@ const { Content } = await entry.render();
 	.content {
 		max-width: 100%;
 		margin-inline: auto;
-		font-size: 12px;
+		font-size: 13px;
 		
 	}
 
@@ -126,28 +125,68 @@ const { Content } = await entry.render();
 	.content :global(h3),
 	.content :global(h4),
 	.content :global(h5) {
-		margin: 0.5rem ;
-		margin-top: 5rem;
-		font-size: medium;
+		margin: 0rem ;
+		margin-top: 2rem;
+		font-size: 20px;
+		
 	}
+	.content :global(h1){
+		font-size: 25px;
+		color:#ff0000;
+		text-transform: uppercase;
+		  text-decoration: underline;
+
+	}
+		.content :global(h2){
+					color: rgba(202, 0, 0, 0.836);
+					  text-decoration: underline;
+
+
+		}
+		.content :global(h3){
+			
+			
+			text-decoration: underline;
+			padding-bottom: 5px;
+		}
 
 	.content :global(img) {
-		border-radius: 1.5rem;
+		border-radius: 1rem;
 		box-shadow: var(--shadow-sm);
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 
 	.content :global(blockquote) {
-		/* font-size: var(--text-lg); */
-		font-family: var(--font-brand);
-		/* font-weight: 600; */
-		line-height: 1.1;
-		padding-inline-start: 1.2rem;
-		border-inline-start: 0.25rem solid var(--accent-dark);
-		color: var(--gray-0);
+		  background-color: #ffffff;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  color:#ff0000;
+
+		
 	}
+
+ .content :global(pre)  {
+  background-color: #f4f4f4;
+  border: 1px solid #f700ffe3;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: auto;
+  
+}
+
+ .content :global(code)  {
+
+  white-space: pre-wrap;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ff0000;
+  
+}
+
+
+
 
 	.back-link,
 	.content :global(a) {
@@ -171,7 +210,10 @@ const { Content } = await entry.render();
 
 		.details {
 			flex-direction: row;
-			gap: 1.5rem;
+			gap: 1rem;
+		}
+		.content{
+			font-size: 18px;
 		}
 
 		
