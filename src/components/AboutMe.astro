@@ -22,8 +22,8 @@ import Icon from './Icon.astro';
 	.github-stats-container {
   position: relative;
   background:var(--github-show-box-background-skills-color);
-border: 1px solid var(--gray-800);
-		border-radius: 1.25rem;
+
+		border-radius: 0.75rem;
 
 
 }
@@ -31,7 +31,6 @@ border: 1px solid var(--gray-800);
 
 
 .github-stats-container::after {
-  border: 1px solid var(--gray-800);
   content: '';
   position: absolute;
   top: -1px;
@@ -40,11 +39,11 @@ border: 1px solid var(--gray-800);
   bottom: -1px;
   background: linear-gradient(105deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
   z-index: -1;
-  		border-radius: 1.25rem;
+		border-radius: 0.75rem;
 
 }
 .github-stats-container::before {
-border: 1px solid var(--gray-800);
+
   content: '';
   position: absolute;
   top: 0;
@@ -59,7 +58,7 @@ border: 1px solid var(--gray-800);
 }
 	
 .box {
-		border: 1px solid var(--gray-800);
+		
 		border-radius: 0.75rem;
 		padding: 0.5rem;
 		
@@ -90,7 +89,7 @@ border: 1px solid var(--gray-800);
 
 	@media (min-width: 50em) {
 		.box {
-			border-radius: 1.5rem;
+		border-radius: 0.75rem;
 			padding: 2.5rem;
 		}
 

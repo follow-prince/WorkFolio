@@ -1,6 +1,7 @@
 /* Global variables */
 :root {
 	/* Colors */
+	--resume-box-border-color:black;
 	--github-show-box-background-skills-color: rgba(255, 255, 255, 0.877);
 	--github-stats-box:#020202c0;
 	--github-stats-box-a: #02020288;
@@ -78,6 +79,7 @@
 }
 
 :root.theme-dark {
+	--resume-box-border-color: white;
 	--github-show-box-background-skills-color: rgba(0, 0, 0, 0.856);
 	--github-stats-box: #f7f7f7c9;
 	--github-stats-box-a: #ffffffe1;
