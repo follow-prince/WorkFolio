@@ -19,7 +19,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	{ label: 'GitHub', href: 'https://github.com/follow-prince', icon: 'github-logo' },
 	{ label: 'CodePen', href: 'https://www.instagram.com/follow.prince', icon: 'instagram-logo' },
 	{ label: 'dribbble', href: 'https://www.linkedin.com/in/elavarasa003', icon: 'linkedin-logo' },
-	{ label: 'YouTube', href: 'https://www.youtube.com/@follow-prince/', icon: 'youtube-logo' },
 ];
 ---
 
@@ -77,6 +76,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		</div>
 	</noscript>
 	<div id="menu-content" hidden>
+		
 		<ul class="nav-items">
 			{
 				textLinks.map(({ label, href }) => (
@@ -228,6 +228,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		padding: 2rem;
 		background-color: var(--gray-999);
 		border-bottom: 1px solid var(--gray-800);
+		border-radius: 2rem 2rem 0 0;
 	}
 
 	.link {
@@ -249,8 +250,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
 		background-color: var(--gray-999);
-		border-radius: 0 0 0.75rem 0.75rem;
+		border-radius: 0 0 2rem 2rem;
 		box-shadow: var(--shadow-lg);
+
 	}
 
 	.socials {

@@ -1,6 +1,7 @@
 /* Global variables */
 :root {
 	/* Colors */
+	--nav-bar-background:rgb(0, 255, 13);
 	--resume-box-border-color:black;
 	--github-show-box-background-skills-color: rgba(255, 255, 255, 0.877);
 	--github-stats-box:#020202c0;
