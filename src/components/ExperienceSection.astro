@@ -1,0 +1,121 @@
+---
+import Icon from "./Icon.astro"
+---
+
+<!-- Experience Section -->
+<section class="timeline">
+  <div class="title-wrapper">
+    <div class="icon-box">
+<Icon  icon="business-icon" size="30" />
+    </div>
+    <h3 class="heading-for-sections" style="">Experience</h3>
+  </div>
+  <ol class="timeline-list">
+
+    <!-- Section 1 end  -->
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">
+        Machine Learning · Apr 2023 - May 2023
+      </h4>
+      <span>DLK TECHNOLOGIES · Internship · On-site</span>
+      <p class="timeline-text">
+        <p>
+          • During my 2-month internship, I learned a lot about machine
+          learning, analyzing data, writing programs in Python, and making data
+          easier to understand with graphs and charts. I made machine learning
+          models and put them to use in real situations.
+          <br /><br />
+          • During the internship, I used different tools like Python, NumPy, Pandas,
+          Scikit-Learn, TensorFlow, SQL, and Tableau. Jupyter Notebooks were super
+          helpful for planning and showing my work.
+          <br /><br />
+          • I also showed that I could make tasks automatic and make our work processes
+          better using Python, Git, and GitHub. This made things faster and smoother.
+          I'm good at making charts and graphs that look nice and help people understand
+          data better. To do this, I mainly used Python, Matplotlib, and Seaborn.
+        </p>
+      </p>
+    </li>
+  </ol>
+</section>
+
+<style>
+  .heading-for-sections {
+    padding: 5px;
+  }
+
+  .timeline {
+    margin-bottom: 1.875rem;
+  }
+
+  .timeline .title-wrapper {
+    font-size: var(--fs-2);
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+    margin-bottom: 1.5625rem;
+  }
+  @media screen and (max-width: 400px) {
+    .timeline .title-wrapper {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .timeline .title-wrapper {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .timeline-list {
+    font-size: var(--fs-3);
+    margin-left: 3rem;
+  }
+
+  .timeline-item {
+    position: relative;
+  }
+
+  .timeline-item:not(:last-child) {
+    margin-bottom: 1.45rem;
+  }
+
+  .timeline-item-title {
+    font-size: var(--fs-3);
+    line-height: 1.5;
+    margin-bottom: 0.4375rem;
+  }
+
+  .timeline-list span {
+    color: var(--vegas-gold);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+  }
+
+  .timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -1.5625rem;
+    left: -1.875rem;
+    width: 0.0625rem;
+    height: calc(100% + 3.125rem);
+    background: var(--jet);
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 0.3125rem;
+    left: -2.0625rem;
+    height: 0.375rem;
+    width: 0.375rem;
+    background: var(--text-gradient-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.25rem var(--jet);
+  }
+
+  .timeline-text {
+    font-weight: var(--fw-300);
+    line-height: 1.5;
+  }
+ 
+</style>

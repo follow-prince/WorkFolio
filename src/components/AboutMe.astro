@@ -1,112 +1,97 @@
 ---
-import Icon from './Icon.astro';
-
+import Icon from "./Icon.astro";
 ---
 
 <section class="box skills github-stats-container">
-	
-
-
-
-
-
-    <h2>About Me</h2>
-    <p>
-		
-        <span class="first-word">I'm </span> passionate about turning my love for development into a fulfilling career. I thrive on learning, generating innovative ideas, and honing my open-source skills. This website showcases my development projects and skills, aiming for efficient and visually appealing software that offers seamless user experiences. <br><br> I specialize in front-end and back-end development, tailoring solutions to unique project needs. Whether you're a client, developer, or just curious, explore my portfolio and connect for collaboration. <br><br> Thank you for visiting, and let's create remarkable digital experiences together!
-    </p>
+  <h2>About Me</h2>
+  <p>
+    I really enjoy using my interest in development to build a satisfying
+    career. I love learning, coming up with new ideas, and improving my skills
+    in open-source work. This website displays the projects I've worked on and
+    the skills I've developed, with the goal of making software that's both
+    efficient and looks good, providing users with a smooth experience. <br><br> I focus
+    on both front-end and back-end development, customizing solutions to fit
+    each project's specific needs. Whether you're a client, a fellow developer,
+    or just curious, take a look at my portfolio and reach out if you'd like to
+    collaborate. Thanks for stopping by, and let's make some amazing digital
+    experiences together!
+  </p>
 </section>
 
-
 <style>
-	.github-stats-container {
-  position: relative;
-  background:var(--github-show-box-background-skills-color);
+  .github-stats-container {
+    position: relative;
+    background: var(--github-show-box-background-skills-color);
 
-		border-radius: 0.75rem;
+    border-radius: 0.75rem;
+  }
 
+  .github-stats-container::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(105deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+    z-index: -1;
+    border-radius: 0.75rem;
+  }
+  .github-stats-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(75deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+    z-index: -2;
+    filter: blur(10px);
+    border-radius: 0.85rem;
+  }
 
-}
+  .box {
+    border-radius: 0.75rem;
+    padding: 0.5rem;
 
+    box-shadow: var(--shadow-sm);
+  }
 
-
-.github-stats-container::after {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  background: linear-gradient(105deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
-  z-index: -1;
-		border-radius: 0.75rem;
-
-}
-.github-stats-container::before {
-
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(75deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
-  z-index: -2;
-  filter: blur(10px);
-  		border-radius: 0.85rem;
-
-}
-	
-.box {
-		
-		border-radius: 0.75rem;
-		padding: 0.5rem;
-		
-		box-shadow: var(--shadow-sm);
-	}
-
- .moved-word::first-word {
+  .moved-word::first-word {
     float: left;
     margin-right: 5px; /* Adjust the spacing as needed */
     font-size: 15px;
   }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-		text-transform: uppercase;
-	}
+  .skills h2 {
+    font-size: var(--text-lg);
+    text-transform: uppercase;
+  }
 
-	.skills p {
-		color: var(--gray-400);
-      
-     
+  .skills p {
+    color: var(--gray-400);
+  }
+  .skills {
+    display: grid;
+    gap: 1rem;
+  }
 
-	}
-    .skills{
-        display: grid;
-        gap: 1rem;
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 0.75rem;
+      padding: 2.5rem;
     }
 
-	@media (min-width: 50em) {
-		.box {
-		border-radius: 0.75rem;
-			padding: 2.5rem;
-		}
+    .skills {
+      display: grid;
+      font-size: 20px;
+      gap: 1rem;
+    }
 
-		.skills {
-			display: grid;
-			  font-size: 20px;
-			gap: 1rem;
-		}
+    .skills h2 {
+      font-size: var(--text-2xl);
+    }
+  }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
-
-
-
-	/* =========================================================== */
-
-
+  /* =========================================================== */
 </style>

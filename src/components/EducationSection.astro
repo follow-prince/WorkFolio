@@ -1,0 +1,178 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section class="timeline">
+  <div class="title-wrapper">
+    <div class="icon-box">
+      <Icon icon="Education-cap" size="30" />
+    </div>
+    <h3 class="heading-for-sections" style="">Education</h3>
+  </div>
+  <ol class="timeline-list">
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">
+        Dr MGR Educational and Research Institute · Jul 2022 - Jul 2024
+      </h4>
+      <span>Master of Computer Applications - MCA<br />CGPA: 7.66</span>
+      <p class="timeline-text">
+        <img class="Dr-Mgr" src="/assets/college-img.svg" alt="" />
+
+        As a final-year PG MCA student, I've learned a lot about computer
+        science and programming, especially in Java, Python, research methods,
+        cybersecurity, networking, full-stack development, and intellectual
+        property rights. I'm good at object-oriented programming, data
+        structures, and algorithms, and I'm really interested in making a career
+        in computer science. While I was working as a Coordinator at Dr. M.G.R.
+        Educational and Research Institute, I got to join a three-day workshop
+        on AI and Machine Learning from November 15th to 17th, 2023. I got a
+        certificate from the Department of Computer Applications as a thank you
+        for being part of it. I'm excited to use what I learned in this workshop
+        for my future projects. Also, in April 2023, I volunteered at the same
+        institute and organized a "Truth or Dare" game event to help students
+        interact socially and build teamwork. I came up with fun challenges,
+        arranged the venue and equipment, and led a team of volunteers to make
+        sure the event went smoothly. These experiences not only improved my
+        practical skills but also taught me about responsibility and leadership,
+        which makes me even more passionate about doing well in computer
+        science.
+      </p>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">
+        University of Madras · Jun 2018 - May 2021
+      </h4>
+      <span>Bachelor of Commerce - B.Com<br />Grade: First Class</span>
+      <p class="timeline-text">
+        <img  width="400px" class="Madras" src="/assets/G-pic.svg" alt="" />
+
+        Starting my education journey in accounting and finance, I graduated
+        with top grades in B.Com, focusing on accounting and corporate
+        accounting. This was the start of a journey where I learned important
+        skills and knowledge. During my studies, I learned about financial
+        statement analysis, cost accounting, and budgeting in detail. These
+        topics not only helped me understand more but also gave me practical
+        skills for managing finances effectively. I also learned about the legal
+        and regulatory rules that affect businesses. Courses in income tax and
+        business law gave me a basic understanding of the legal responsibilities
+        and limits that businesses face. With this education, I'm ready to start
+        a career in accounting and finance. I'm excited to use what I've learned
+        to make a meaningful contribution and do well in this ever-changing
+        field.
+      </p>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">
+        HSC - Higher Secondary School Certificate - 2018
+      </h4>
+      <span>Govt Hr Sec school · Percentage: 67%</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">
+        SSLC - Secondary School Leaving Certificate - 2016
+      </h4>
+      <span>Govt Hr Sec school · Percentage: 62%</span>
+    </li>
+  </ol>
+</section>
+<br /><br />
+
+<style>
+  .heading-for-sections {
+    padding: 5px;
+  }
+
+  .timeline {
+    margin-bottom: 1.875rem;
+  }
+
+  .timeline .title-wrapper {
+    font-size: var(--fs-2);
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+    margin-bottom: 1.5625rem;
+  }
+  @media screen and (max-width: 400px) {
+    .timeline .title-wrapper {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .timeline .title-wrapper {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .timeline-list {
+    font-size: var(--fs-3);
+    margin-left: 3rem;
+  }
+
+  .timeline-item {
+    position: relative;
+  }
+
+  .timeline-item:not(:last-child) {
+    margin-bottom: 1.45rem;
+  }
+
+  .timeline-item-title {
+    font-size: var(--fs-3);
+    line-height: 1.5;
+    margin-bottom: 0.4375rem;
+  }
+
+  .timeline-list span {
+    color: var(--vegas-gold);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+  }
+
+  .timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -1.5625rem;
+    left: -1.875rem;
+    width: 0.0625rem;
+    height: calc(100% + 3.125rem);
+    background: var(--jet);
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 0.3125rem;
+    left: -2.0625rem;
+    height: 0.375rem;
+    width: 0.375rem;
+    background: var(--text-gradient-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.25rem var(--jet);
+  }
+
+  .timeline-text {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .Dr-Mgr {
+    border-radius: 7px;
+    float: right;
+    margin-left: 4px;
+    width: 100%;
+  }
+  .Madras {
+    border-radius: 7px;
+    float: right;
+    margin-left: 4px;
+    width: 100%;
+  }
+  @media screen and (min-width: 600px) {
+    .Dr-Mgr {
+      width: 62%;
+    }
+    .Madras{
+        width: 30%;
+    }
+  }
+</style>
